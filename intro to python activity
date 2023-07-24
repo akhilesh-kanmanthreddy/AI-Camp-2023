@@ -1,0 +1,188 @@
+# Python Basics
+The goal of this notebook is to provide students with knowledge of the fundamentals of python. We will take a more interactive approach than most class room settings and ask the students to do some research on their own then bring their learnings back here to share with the class. 
+### Variables
+Variables work by assigning a value to a specific word or string of characters, you can think of this as a name. It can be done using the "=" sign. This assigns whatever is on the right of the "=" to the name on the left. We'll go ahead and try assigning a few variables in the next block.
+```py
+a = 1
+b = 2
+c = 3
+print(a)
+```
+We can also perform basic algebra to these variables and save the output to a new variable
+```py
+d = a + b
+print(d)
+```
+```py
+e = c - a
+print(e)
+```
+```py
+f = b * c
+print(f)
+```
+```py
+g = a / b
+print(g)
+```
+Sometimes we want to update the value of one variable, so we can do this
+```py
+g = g*2 # the same thing works for /, +, and -
+g *= 2  # a shorthand version of the same line
+print(g)
+```
+There are tons of different types of variables we can make. For this next section, we will ask the students to go out and figure out how to create the following types of variable: strings, floats and booleans. Once you have created these variables, try the same operations we used above and see what they do.
+### TODO:
+Create a few string variables here, then try to add them together, subtract them, multiply them and divide them to see what happens. You may get an error, and thats okay. Its important to know what can and can't be done with a type of data.
+### TODO:
+Create a few float variables here, then try to add them together, subtract them, multiply them and divide them to see what happens. You may get an error, and thats okay. Its important to know what can and can't be done with a type of data.
+### TODO:
+Create a few boolean variables here, then try to add them together, subtract them, multiply them and divide them to see what happens. You may get an error, and thats okay. Its important to know what can and can't be done with a type of data.
+## Lists, Dictionaries, and Tuples
+Lists work similarly to the variables we created above but store multiple values. We'll cover the types metioned above then ask the students to try and create their own versions of them.
+
+First up, lists. you can create a list with the following code.
+```py
+my_list = [1, 2, 3, 4, 5]
+```
+To access a specific item from the list, you would do the following.
+```py
+my_list[2] # here, 2 is the index you are accessing
+```
+The first element in the list is at index 0, then the second element is at index 1 and so on.
+```py
+print(my_list[0], my_list[1], my_list[2], my_list[3], my_list[4])
+```
+### TODO:
+Below, create a list of your favorite colors. Then figure out how to add a new element to the end of the list. Finally change a value in the list to something new.
+### TODO:
+Now, figure out how to `append` a new element to the end of the list. Maybe google "how to append an element to a list python"
+
+Finally change a value in the list to something new.
+## For loops, while loops, and if statements
+We will learn more about for loops in the next lesson. For now, we will use them to go through a list and print out each element.
+```py
+for number in my_list:
+  print(number)
+```
+Next, we will look at how to make a list run a specific number of times.
+```py
+for i in range(5): # range functions the same here as the list [0,1,2,3,4,5]
+    print('i = ', i)
+```
+Next, we'll take a look at while loops. In general, you can make a while loop do anything that a for loop can do but with slightly different syntax, so if you find youself understanding while loops better than for loops, you can just focus on using while loops. 
+
+In the block below, we will make a while loop that runs 5 times. For while loops, we can't specify how long they will run for ahead of time so its important for us to create an achievable exit condition. An exit condition is just the condition that will cause the code to stop running. This is checked every time, immediatly before the code runs or reruns. We want to make sure that this condition will eventually happen, otherwise the code will run until something crashes or we manually close it
+```py
+i = 0
+while i < 5:
+    print("Hello World")
+    i = i + 1
+```
+Now for if statements. The if-elif-else statement is used to conditionally execute a statement or a block of statements. Conditions can be true or false, execute one thing when the condition is true, something else when the condition is false.
+```py
+a = 1
+b = 2
+if a > b:
+    print("a is greater than b")
+```
+We can add else statements to the above. An else statement is what will be run if the original statement is false.
+```py
+a = 1
+b = 2
+if a > b:
+    print("a is greater than b")
+else:
+    print("b is less than a")
+```
+Additionally, we can use elif statements to add additional conditions to the structure.
+```py
+a = 1
+b = 1
+if a > b:
+    print("a is greater than b")
+elif a == b:
+    print("a equals b")
+else:
+    print("b is less than a")
+```
+Now its your turn. Either break up into 3 teams and have each team solve one of the blocks or solve them all together.
+
+Block 1:
+```py
+#Make the loop so that instead of the number 3, "fizz" is printed, and instead of the number 5, "buzz" is printed. Print the numbers 1-10.
+#A basic structure is given:
+x = 0
+while():
+  if():
+  elif():
+  else:
+```
+
+Block 2:
+```py
+#Make every object in the 2-d list print.
+#A basic structure is given. Fill in the blanks (___).
+fruits_and_veggies = [["Apple", "Banana", "Orange"], ["Broccoli", "Peas", "Carrots"]]
+for ___ in ___:
+  for ___ in ___:
+    print(___)
+```
+
+Block 3:
+```py
+#Add list a to list b item by item
+#A basic structure is given.
+a = [1, 2, 3, 4, 5]
+b = [6, 7, 8, 9, 10]
+for ___ in ___:
+  ___.___()
+```
+###
+
+## Functions
+###
+You can think of functions in coding as repeatable pieces of code. They will run the same way everytime you run them. Here's an example:
+```py
+def my_first_function():
+  print("AI Camp is the best!")
+```
+Everytime we run this, it will output "AI Camp is the best!" into the console. We can run it at any time in our program by calling it like this:
+```py
+my_first_function()
+```
+
+Lets break it down. The first line of making our function will always have 4 parts. The first one is always the keyword "def". This tells the computer we are making a function! Second is the name of the function, which was "my_first_function" in the example. This can be anything we want as long as it follows some rules that python sets for any name. After that are the parenthesis (). In this we can put in any information we want our function to have. We'll talk about this a bit later. Finally, just a colon (:)!
+
+Parameters, or the information that goes in the parenthesis, is information your function can use to change what it will output. For example, if I wanted a function to add two numbers, I could make it like this:
+```py
+def add(a, b):
+  sum = a + b
+  print(sum)
+```
+The cool part is when we call it, we can put regular numbers into the call! Those numbers are assigned to the variables that they are called into for as long as the function is running. Here's an example call to add():
+```py
+add(3, 7) # This prints "10" to the console
+```
+Parameters don't just have to be numbers. Heres an example of one that wants a String.
+```py
+def compliment(name):
+  print(name + "is the coolest!")
+
+compliment("Thomas") # This prints "Thomas is the coolest!" to the console.
+```
+
+The last thing we'll learn about functions is that they can return things. If we wanted to make a function to solve something and use the output in the rest of our code, we can return it, setting the function call equal to a variable.
+For example, here's one that converts from celsius to fahrenheit and how we can use it.
+```py
+current_temp_in_c = 18
+
+def c_to_f(temp_c):
+  temp_f = (temp_c * (9/5)) + 32
+  return temp_f
+
+current_temp_in_f = c_to_f(current_temp_in_c)
+print("The current temp in fahrenheit is: " + current_temp_in_f + "degrees.")
+```
+
+Now you try to make a function that turns it back into celsius!
