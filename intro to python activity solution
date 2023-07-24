@@ -1,0 +1,83 @@
+# current_temp_in_f = c_to_f(current_temp_in_c)
+#current_temp_in_c = f_to_c(current_temp_in_f)
+#print("The current temp in fahrenheit is: ", current_temp_in_c ," degrees.")
+
+
+
+#variables
+# todo 1 
+str1 = "Hello"
+str2 = "World!"
+print(str1 + str2)
+#print(str1 - str2) does not work
+#print(str1 / str2) does not work
+#print(str1 * str2) does not work
+
+# todo 2
+float1 = 3.14159165
+float2 = 6.62607015
+print(float1 + float2)
+print(float1 - float2)
+print(float1 / float2)
+print(float1 * float2)
+
+# todo 3
+bool1 = True
+bool2 = False
+print(bool1 + bool2) # True + False = 1
+print(bool1 - bool2) # True - False = 1
+print(bool1 * bool2) # True * False = 0 
+#print(bool1 / bool2) gives error
+print(bool1 + bool1) # True + True = 2
+print(bool1 - bool1) # True - True = 0
+print(bool1 * bool1) # True * True = 1
+print(bool1 / bool1) # True / True = 1.0
+
+
+#Lists, Dictionaries, and Tuples
+colors_list = ["red", "yellow", "blue", "green", "purple"]
+colors_list.insert(5,"black")
+print(colors_list)
+colors_list.append("white")
+print(colors_list)
+colors_list[0] = "pink"
+print(colors_list)
+
+#For loops, while loops, and if statements
+
+#block 1
+x = 1
+while(x < 10):
+  if(x == 3):
+    print("fizz")
+    x +=1
+  elif(x == 5):
+    print("buzz")
+    x +=1
+  else:
+    print(x)
+    x +=1
+
+#block 2 
+fruits_and_veggies = [["Apple", "Banana", "Orange"], ["Broccoli", "Peas", "Carrots"]]
+for i in fruits_and_veggies:
+  for j in i:
+    print(j)
+
+#block 3
+a = [1, 2, 3, 4, 5]
+b = [6, 7, 8, 9, 10]
+for i in a:
+  b.insert(0,i)
+print(b)
+
+
+#functions 
+current_temp_in_f = 64.4
+
+def f_to_c(temp_f):
+  temp_c = (temp_f - 32) * 5/9
+  return temp_c
+
+current_tempt_in_c = str(f_to_c(current_temp_in_f))
+print("The current temp in celsius is: " + current_tempt_in_c  + " degrees.")
